@@ -45,7 +45,7 @@ function zoomedImage = adaptiveEdgeEnhancement(inputImage, zoomFactor, threshold
                                 f11 = double(inputImage(i+1, j+1, c));
 
                                 zoomedImage((i-1)*zoomFactor+m+1, (j-1)*zoomFactor+n+1, c) = ...
-                                    (1-t1)*(1-t2)*f00 + t1(1-t2)*f10 + (1-t1)*t2*f01 + t1*t2*f11;
+                                    (1-t1)*(1-t2)*f00 + t1*(1-t2)*f10 + (1-t1)*t2*f01 + t1*t2*f11;
                                     imwrite(zoomedImage,"zoomed_image_soloturk.jpg");
 
                             else
